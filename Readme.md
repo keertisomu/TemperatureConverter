@@ -13,14 +13,19 @@
  - TemperatureConverter.UnitTests: xUnit tests for the temperature conversion
 
 # Build setup
- - cd ...\TemperatureConverter\TemperatureConverter.WebApp\ClientApp
+ - cd ...\TemperatureConverter\TemperatureConverter.WebApp\ClientApp in Cmd prompt
  - npm install
- - Build TemperatureConverter.sln
+ - Open & Build TemperatureConverter.sln , Verify all unit tests are passing.
  - Set TemperatureConverter.WebApp as the startUp project in VS2019
- - Verify .Net Core app starts on both http://localost:5000 and https://localhost:5001
+ - Click F5 & Verify .Net Core app starts on both http://localost:5000 and https://localhost:5001
  - Verify TemperatureConverter page shows up in browser tab.  
+ - (Note) : Its not required to run ng serve on Angular as the .NetCore/AngularSpa starts the angular as well.
 
-# (Note) : Its not required to run ng serve on Angular as the .NetCore/AngularSpa starts the angular as well.
+# Testing
+ - Choose from/to units
+ - Enter value to convert
+ - Click Convert and Verify Result based on "to unit" gets populated.
+ - Temperature values rounded to 2 decimal places.
 
 # Troubleshooting:
  - If you encounter a error "Failed to bind to address localhost:5000" , please check what other application is listening on this port(netstat -ano | findstr :5000) and kill these processes.
