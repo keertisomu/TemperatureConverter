@@ -23,6 +23,7 @@ namespace TemperatureConverter.WebApp
         {
             services.AddSingleton<IConverter, Converter>();
             services.AddControllersWithViews();
+            services.AddSwaggerGen();
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
@@ -33,6 +34,11 @@ namespace TemperatureConverter.WebApp
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Temperature Converter V1");
+            });
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

@@ -27,6 +27,9 @@
  - Click Convert and Verify Result based on "to unit" gets populated.
  - Temperature values rounded to 2 decimal places.
 
+# Api endpoints
+ - swagger endpoint: https://localhost:5001/swagger
+
 # Troubleshooting:
  - If you encounter a error "Failed to bind to address localhost:5000" , please check what other application is listening on this port(netstat -ano | findstr :5000) and kill these processes.
 
