@@ -1,0 +1,28 @@
+<div class="component-panel-padding-left sidebyside">
+  <div class="form-panel">
+    <h1>Temperature Converter</h1>
+    <div class="form-controls-panel">
+      <div class="form-group">
+        <label for="fromUnit">From Unit</label>
+        <select class="form-control" id="fromUnit" [(ngModel)]="selectedFromUnit" required>
+          <option *ngFor="let unit of units" [value]="unit">{{ unit }}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="toUnit">To Unit</label>
+        <select class="form-control" id="toUnit" [(ngModel)]="selectedToUnit" required>
+          <option *ngFor="let unit of units" [value]="unit">{{ unit }}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="valueConvert">Convert value</label>
+        <input type="text"  class="form-control" id="valueConvert" [(ngModel)]="valueToConvert">  
+      </div>
+      <div class="form-group">
+        <label for="valueResult">Result</label>
+        <input type="text"  class="form-control" id="valueResult" [(ngModel)]="result">  
+      </div>
+      <button class="button btn btn-primary" [disabled]="selectedFromUnit === '' || selectedToUnit === '' || valueToConvert === '' "  (click)="convertTemperatureValue()">Convert</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemperatureConverter.WebApp", "TemperatureConverter.WebApp\TemperatureConverter.WebApp.csproj", "{93AF6DC4-ADF1-4A9C-8533-34A7EB75E4B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TermperatureConverter.Core", "TermperatureConverter.Core\TermperatureConverter.Core.csproj", "{A551CF3A-1E48-4479-937A-E6ACB7D22DFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemperatureConverter.UnitTests", "TemperatureConverter.UnitTests\TemperatureConverter.UnitTests.csproj", "{33420755-2547-45D2-820D-07121E4CA202}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{93AF6DC4-ADF1-4A9C-8533-34A7EB75E4B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93AF6DC4-ADF1-4A9C-8533-34A7EB75E4B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93AF6DC4-ADF1-4A9C-8533-34A7EB75E4B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93AF6DC4-ADF1-4A9C-8533-34A7EB75E4B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A551CF3A-1E48-4479-937A-E6ACB7D22DFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A551CF3A-1E48-4479-937A-E6ACB7D22DFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A551CF3A-1E48-4479-937A-E6ACB7D22DFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A551CF3A-1E48-4479-937A-E6ACB7D22DFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33420755-2547-45D2-820D-07121E4CA202}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33420755-2547-45D2-820D-07121E4CA202}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33420755-2547-45D2-820D-07121E4CA202}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33420755-2547-45D2-820D-07121E4CA202}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9E996B84-B428-4CD9-9E45-A9A5129CB6A1}
+	EndGlobalSection
+EndGlobal
