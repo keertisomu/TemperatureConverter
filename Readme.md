@@ -5,7 +5,7 @@
  - VS 2019
 
 # git 
- - git clone 
+ - git clone https://github.com/keertisomu/TemperatureConverter.git
 
 # Solution structure
  - TemperatureConverter.WebApp: This is the main .Net Core / Angular Spa project. ClientApp folder within this project contains the Angular code.
