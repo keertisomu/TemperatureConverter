@@ -21,7 +21,11 @@ namespace TemperatureConverter.WebApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<IConverter, Converter>();
+            //configure temperature converter.
+            SetUpTemperatureConverter(services);
+
+            // old temperature converter implementation
+            //services.AddSingleton<IConverter, Converter>();
             services.AddControllersWithViews();
             services.AddSwaggerGen();
             // In production, the Angular files will be served from this directory
@@ -29,6 +33,18 @@ namespace TemperatureConverter.WebApp
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+        }
+
+        private void SetUpTemperatureConverter(IServiceCollection services)
+        {
+            IUnitConverter<Temperature, float> tempConverter = new UnitConverter<Temperature, float>
+            {
+                BaseUnit = Temperature.Celsius
+            };
+            tempConverter.RegisterConversion(Temperature.Farenheit, v => (v - 32) * 5 / 9, v => (v * 9 / 5) + 32);
+            tempConverter.RegisterConversion(Temperature.Kelvin, v => v - 273.15f, v => (v + 273.15f));
+
+            services.AddSingleton(typeof(IUnitConverter<Temperature, float>), tempConverter);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
